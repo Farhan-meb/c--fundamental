@@ -71,6 +71,10 @@ public class Test
 	// checkStack();
 	
     // checkQueue();
+    
+    // checkList();
+    
+    // checkMap();
 	
 	
 	}
@@ -125,6 +129,28 @@ public class Test
 	
 	}
 	
+	static void checkList(){
+		List<int> numbers = new List<int>() { 1, 2, 5, 7, 8, 10 };
+		numbers.Add(13);
+
+		Console.WriteLine(numbers[3]); // prints 7
+
+		// using foreach LINQ method
+		numbers.ForEach(num => Console.WriteLine(num + ", "));
+
+		// using for loop
+		for(int i = 0; i < numbers.Count; i++) Console.WriteLine(numbers[i]);
+			
+	}
 	
-	
+	static void checkMap(){
+		var map = new Dictionary<string, int>();
+		map.Add("farhan", 25);
+		map.Add("abcde", 1);
+		Console.WriteLine(map["farhan"]);
+		
+		foreach(var mp in map){
+			Console.WriteLine(mp.Key + " = " + mp.Value);
+		}
+	}
 }
