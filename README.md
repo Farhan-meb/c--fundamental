@@ -1,14 +1,14 @@
 # c#--fundamental
 
-using System; <br>
-using System.Linq; //array max,min etc built in  <br>
-using System.Collections; // normal ds (stack,queue etc) <br>
-using System.Collections.Generic; //generic ds (stack, queue etc with specific data type) <br>
+// using System; <br>
+// using System.Linq; //array max,min etc built in  <br>
+// using System.Collections; // normal ds (stack,queue etc) <br>
+// using System.Collections.Generic; //generic ds (stack, queue etc with specific data type) <br>
 
-public class Test
-{
-	public static void Main()
-	{
+// public class Test
+// {
+	// public static void Main()
+	// {
 		
     // int a = Convert.ToInt32(Console.ReadLine());
     // int b = Convert.ToInt32(Console.ReadLine());
