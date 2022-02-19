@@ -1,0 +1,27 @@
+using System;
+
+public class Test
+{
+	public static void Main()
+	{
+		int[] num = {1,2,3,4,5,6,1,1,7,4,7,7};
+		// int[] freq = new int[10];
+		// Array.Clear(freq, 0, freq.Length);
+		
+		long sum = 0;
+		long max = -1, min = 100;
+		
+		
+		for(int i=0;i<num.Length;i++) {
+		
+			sum+=num[i];
+			if(num[i]<min) min = num[i];
+			if(num[i]>max) max = num[i];
+			
+		}
+		
+		
+		Console.WriteLine((sum - (min+max))/2);
+		
+	}
+}
