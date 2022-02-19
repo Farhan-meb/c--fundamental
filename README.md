@@ -1,9 +1,9 @@
 # c#--fundamental
 
-using System;
-using System.Linq; //array max,min etc built in 
-using System.Collections; // normal ds (stack,queue etc)
-using System.Collections.Generic; //generic ds (stack, queue etc with specific data type)
+using System; <br>
+using System.Linq; //array max,min etc built in  <br>
+using System.Collections; // normal ds (stack,queue etc) <br>
+using System.Collections.Generic; //generic ds (stack, queue etc with specific data type) <br>
 
 public class Test
 {
