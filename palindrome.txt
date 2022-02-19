@@ -1,0 +1,21 @@
+using System;
+
+public class Test
+{
+	public static void Main()
+	{
+		// your code goes here
+		string str = Console.ReadLine();
+		int l = 0, r = str.Length-1;
+		bool yes = true;
+		while(l<r){
+			if(str[l]!=str[r]){
+				yes = false;
+			}
+			l++;r--;
+		}
+		
+		if(!yes) Console.WriteLine("Not a palindrome!");
+		else Console.WriteLine("Palindrome");
+	}
+}
