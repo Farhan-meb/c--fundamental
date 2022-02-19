@@ -1,0 +1,43 @@
+using System;
+
+public class Test
+{
+	public static void Main()
+	{
+		int[] num = {1,2,3,4,5,6,1,1,7,4,7,7};
+	
+		
+		long sum = 0;
+		long max = num[0], min = num[0], minCount = 0, maxCount = 0;
+		
+		
+		for(int i=0;i<num.Length;i++) {
+		
+			sum+=num[i];
+			if(num[i]<=min) {
+				if(num[i]==min){
+					minCount++;
+				}
+				else{
+					min = num[i];
+					minCount=1;
+				}
+				
+			}
+			if(num[i]>=max){
+				if(num[i]==max){
+					maxCount++;
+				}
+				else{
+					max = num[i];
+					maxCount=1;
+				}
+			}
+			
+		}
+		
+		
+		Console.WriteLine((sum - ((min*minCount)+(max*maxCount)))/2);
+		
+	}
+}
