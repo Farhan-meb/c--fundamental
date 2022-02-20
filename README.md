@@ -90,6 +90,7 @@ public class Test
 		q.Push(1);
 		q.Push(2);
 		q.Push(3);
+		int top = st.Peek();
 		Console.WriteLine(q.Count);
 		foreach(int i in q){
 			Console.WriteLine(i);
