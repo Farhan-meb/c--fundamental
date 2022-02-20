@@ -1,0 +1,95 @@
+public class Solution {
+    public IList<string> FullJustify(string[] words, int maxWidth) {
+        List<string> ans = new List<string>();
+        
+        for(int i=0;i<words.Length;i++){
+            int countChar = 0, wordChar = 0;
+            int endInd = i;
+            string tString = "";
+            bool noWord = false;
+            
+            for(int j=i;j<words.Length;j++){
+                countChar += words[j].Length;
+                wordChar++;
+            	countChar+=(wordChar-1);
+                if(countChar>maxWidth){
+                    if(i==j){
+                        endInd = j;
+                        countChar-=(wordChar-1);
+                    }
+                    else {
+                        endInd = j-1;
+                        countChar-=words[j].Length;
+                        wordChar--;
+                        countChar-=(wordChar);
+                    }
+
+                    break;
+                }
+                else if(countChar == maxWidth){
+                    endInd = j;
+                    countChar-=(wordChar-1);
+
+                    break;
+                }
+                countChar-=(wordChar-1);
+     
+                if(j==words.Length-1) {
+                	noWord = true;
+            		endInd = j;
+                }
+  
+            }
+            
+
+            
+            if(wordChar == 1){
+                    for(int j=i;j<=endInd;j++){
+                        tString += words[j];
+                        int temp = maxWidth - words[j].Length;
+                        while(temp>0) {
+                            tString+=' ';
+                            temp--;
+                        }
+                    }
+            }
+            else{
+
+                if(noWord){
+                    for(int j=i;j<=endInd;j++){
+                        tString += words[j];
+                        tString+=' ';
+                    }
+                    int left = maxWidth - tString.Length;
+                    while(left>0) {
+                        tString+=' ';
+                        left--;
+                    }
+                }
+                else{
+                    int eachSpace = (maxWidth-countChar) / (wordChar-1);
+                    int extraSpace = (maxWidth-countChar) % (wordChar-1);
+            
+                for(int j=i;j<=endInd;j++){
+                        tString += words[j];
+                        if(j==endInd) break;
+                        for(int k=0;k<eachSpace;k++) tString+=' ';
+                        if(extraSpace > 0) {
+                            tString+=' ';
+                            extraSpace--;
+                        }
+                    }
+                }
+            	
+                
+            }
+            
+            i = endInd;
+            ans.Add(tString);
+            
+            
+        }
+        
+        return ans;
+    }
+}
