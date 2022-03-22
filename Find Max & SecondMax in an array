@@ -13,7 +13,8 @@ public class Test
 				smx = mx;
 				mx = nums[i];
 			}
-			
+			else if (nums[i] > smx && nums[i] != mx)
+            			smx = nums[i];
 		}
 		
 		Console.WriteLine(mx + " " + smx);
