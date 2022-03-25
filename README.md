@@ -15,7 +15,8 @@ public class Test
     // Console.WriteLine(Math.Min('a','b'));
 	// Console.WriteLine(Math.Floor(64.895));
 	// Console.WriteLine(Math.Sqrt(64));
-	 
+	 //int spaces = text.Count(Char.IsWhiteSpace);
+        //int words =  text.Split().Length;
 	// char a = 'a';
 	// Console.WriteLine('a');
 	// Console.WriteLine(a);
